@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="script.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Sigma multicharacter</title>
+  </head>
+  <style>
+    body {
+      overflow: hidden;
+      opacity: 0;
+      transform: translateX(-100%);
+      animation: slideInLeft 0.45s ease forwards;
+    }
+    @keyframes slideInLeft {
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  </style>
+
+  <body class="h-screen">
+    <div class="flex items-center p-40 size-full" style="perspective: 550px">
+      <div
+        class="w-86 h-[34rem] flex flex-col items-center bg-neutral-900 text-white rounded-lg p-2 font-['Roboto'] border-2 border-neutral-600 skew-y-12"
+        id="multichar"
+        style="transform: rotateY(30deg)"
+      >
+        <h1 class="text-[3rem]">Characters</h1>
+        <button
+          class="character border-2 border-neutral-500 px-5 py-3 rounded-lg bg-neutral-800 hover:bg-neutral-700 duration-300 transition-all m-3"
+          style="
+            transform-style: preserve-3d;
+            transform: translate3d(0, 0, 0px);
+          "
+        >
+          Create Character
+        </button>
+        <button
+          class="character border-2 border-neutral-500 px-5 py-3 rounded-lg bg-neutral-800 hover:bg-neutral-700 duration-300 transition-all m-3"
+          style="
+            transform-style: preserve-3d;
+            transform: translate3d(0, 0, 0px);
+          "
+        >
+          Create Character
+        </button>
+        <button
+          class="character border-2 border-neutral-500 px-5 py-3 rounded-lg bg-neutral-800 hover:bg-neutral-700 duration-300 transition-all m-4"
+          style="
+            transform-style: preserve-3d;
+            transform: translate3d(0, 0, 0px);
+          "
+        >
+          Create Character
+        </button>
+        <button
+          style="display: none"
+          id="delete"
+          class="delete border-2 border-red-500 text-red-500 px-10 py-3 rounded-lg bg-neutral-800 hover:bg-neutral-700 duration-300 transition-all m-3"
+        >
+          Delete
+        </button>
+        <div class="border-2 border-neutral-500 rounded-lg p-2">
+          <h1 id="firstname">Firstname: UNKNOWN</h1>
+          <h1 id="lastname">Lastname: UNKNOWN</h1>
+          <h1 id="age">Age: UNKNOWN Years</h1>
+          <h1 id="job">Job: UNKNOWN - UNKNOWN</h1>
+          <h1 id="adminrank">Admin Rank: UNKNOWN</h1>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
