@@ -25,16 +25,9 @@ lib.callback.register('nc-multichar:setupCharacter', function(src, chosenCharact
 
     if res[1] then
         exports['nc-core']:SetChosenCharacter(src, chosenCharacter)
-        -- res[1].firstname = json.decode(res[1].firstname)
-        -- res[1].lastname = json.decode(res[1].lastname)
-        -- res[1].character_id = json.decode(res[1].character_id)
-        -- res[1].adminrank = json.decode(res[1].adminrank)
-        -- res[1].job = json.decode(res[1].job)
-        -- res[1].sex = json.decode(res[1].sex)
         res[1].coords = json.decode(res[1].coords)
         return res[1]
     else
-        -- print('Fejl?', chosenCharacter, player.id)
     end
 end)
 
