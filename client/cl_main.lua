@@ -1,6 +1,16 @@
 ---@diagnostic disable: undefined-global
 local character = exports['nc-core']:GetCharacterData()
 
+RegisterNetEvent('playerSpawned', function()
+    if not character then
+        CreateCharacter()
+    elseif character then
+        exports['nc-multichar']:OpenMulticharacter(true)
+    else
+        print('player not defined')
+    end
+end)
+
 CreateThread(function() -- CLOSES THE MULTICHARACTER AUTOMATICLY WHEN RESTARTED
     SendNUIMessage({
         action = 'close',
